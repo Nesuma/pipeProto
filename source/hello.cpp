@@ -6,6 +6,6 @@ int main(){
     std::cout << "die Pipeline funktioniert" << std::endl;
     std::cout << "yay" << std::endl;
     std::cout << "yay" << std::endl;
-    
+    std::cout << "neue Struktur" << std::endl;
     return 0;
 }
