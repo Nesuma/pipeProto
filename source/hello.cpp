@@ -7,5 +7,6 @@ int main(){
     std::cout << "yay" << std::endl;
     std::cout << "yay" << std::endl;
     std::cout << "neue Struktur" << std::endl;
+    std::cout << "es funktioniert immer noch" << std::endl;
     return 0;
 }
