@@ -1,4 +1,4 @@
-all: hello
+all: hello.exe
 
-hello: hello.cpp
-		g++ -o hello hello.cpp
+hello.exe: hello.cpp
+		g++ -o hello.exe hello.cpp
