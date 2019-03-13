@@ -13,7 +13,7 @@ pipeline {
             agent {
                 docker {
                     image 'secc/build_env:v6' 
-                    args '--rm -v ${PWD}source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source'
+                    args '--rm -v '${PWD}'source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source'
                 }
             }            
             steps {
