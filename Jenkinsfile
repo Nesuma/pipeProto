@@ -16,9 +16,9 @@ pipeline {
                     args '--rm -v /var/lib/jenkins/workspace/pipeProto/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source make'
                 }
             }            
-            // steps {
-            //     sh 'make'
-            // }
+            steps {
+                //sh 'make'
+            }
         }
         /*stage('Test') {
             steps {
