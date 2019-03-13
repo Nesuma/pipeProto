@@ -10,9 +10,11 @@ pipeline {
         }
         
         stage('Build') {
-            agent docker {
-                image 'secc/build_env:v6' 
-                args '--rm -v "$(pwd)"/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source'
+            agent {
+                docker {
+                    image 'secc/build_env:v6' 
+                    args '--rm -v "$(pwd)"/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source'
+                }
             }            
             steps {
                 'make'
