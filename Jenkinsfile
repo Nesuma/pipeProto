@@ -17,7 +17,7 @@ pipeline {
                 }
             }            
             steps {
-                //sh 'make'
+                sh 'echo hallo'
             }
         }
         /*stage('Test') {
