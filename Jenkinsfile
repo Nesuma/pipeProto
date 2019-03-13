@@ -11,6 +11,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'ls -al /usr/src/secc/pipeProto/source'
+                sh 'pwd'
                 sh 'cd /usr/src/secc/pipeProto/source'
                 sh 'pwd'
                 sh 'ls'
