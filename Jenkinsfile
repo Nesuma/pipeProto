@@ -17,7 +17,7 @@ pipeline {
                 }
             }            
             steps {
-                'make'
+                sh 'make'
             }
         }
         /*stage('Test') {
