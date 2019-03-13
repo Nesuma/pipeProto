@@ -11,6 +11,10 @@ pipeline {
         stage('build') {
             steps {
                 sh 'ls -al /usr/src/'
+                sh 'pwd'
+                sh 'cd /usr/src'
+                sh 'pwd'
+                sh 'ls -al'
             }
         }
     }
