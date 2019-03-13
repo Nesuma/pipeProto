@@ -11,7 +11,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'ls -al /usr/src/secc/pipeProto/source'
-                // sh 'make' 
+                sh 'cd /usr/src/secc/pipeProto/source'
+                sh 'make' 
             }
         }
     }
