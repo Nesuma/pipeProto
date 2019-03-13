@@ -8,5 +8,6 @@ int main(){
     std::cout << "yay" << std::endl;
     std::cout << "neue Struktur" << std::endl;
     std::cout << "es funktioniert immer noch" << std::endl;
+    std::cout << "auf dass Jenkins wieder fröhlich wird" << std::endl;
     return 0;
 }
