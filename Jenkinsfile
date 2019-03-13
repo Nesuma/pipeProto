@@ -10,18 +10,19 @@ pipeline {
         }
         
         stage('Build') {
-            // agent {
-            //     docker {
-            //         image 'secc/build_env:v6' 
-            //         //args '--rm -v /var/lib/jenkins/workspace/pipeProto/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source'
-            //     }
-            // }            
-            // steps {
-            //     sh 'make'
-            // }
+            agent {
+                docker {
+                    image 'secc/build_env:v6' 
+                    //args '--rm -v /var/lib/jenkins/workspace/pipeProto/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source'
+                }
+            }            
             steps {
-               sh 'docker run --rm -v "$(pwd)"/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source secc/build_env:v6 make' 
+                sh 'echo blabla'
+                sh 'touch temp'
             }
+            // steps {
+            //    sh 'docker run --rm -v "$(pwd)"/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source secc/build_env:v6 make' 
+            // }
         }
         /*stage('Test') {
             steps {
