@@ -2,12 +2,16 @@
 //cp "$(pwd)"/source/*.exe /home/hdu/development/secc/builds/
 pipeline {
     agent {
-        docker { image 'secc/build_env:v6' }
+        docker { 
+            image 'secc/build_env:v6'
+            args '--rm -v $PWD/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source'
+        }
     }
     stages {
         stage('build') {
             steps {
-                sh 'ls -al /usr/src/secc/pipeProto' 
+                sh 'ls -al /usr/src/secc/pipeProto/source'
+                // sh 'make' 
             }
         }
     }
