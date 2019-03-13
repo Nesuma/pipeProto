@@ -4,7 +4,7 @@ pipeline {
     agent {
         docker { 
             image 'secc/build_env:v6'
-            args '--rm -v $PWD/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source'
+            args '--rm -v /var/lib/jenkins/workspace/pipeProto2_master/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source'
         }
     }
     stages {
