@@ -9,5 +9,6 @@ int main(){
     std::cout << "neue Struktur" << std::endl;
     std::cout << "es funktioniert immer noch" << std::endl;
     std::cout << "auf dass Jenkins wieder fröhlich wird" << std::endl;
+    std::cout << "finaler Test" << std::endl;
     return 0;
 }
