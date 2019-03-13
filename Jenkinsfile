@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'ls -al /' 
+                sh 'ls -al /usr/src/secc/pipeProto' 
             }
         }
     }
