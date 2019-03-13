@@ -10,14 +10,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'pwd'
-                sh 'ls -al /usr/src/secc/pipeProto/source'
-                sh 'ls -al /'
-                sh 'pwd'
-                sh 'cd /usr/src/secc/pipeProto/source'
-                sh 'pwd'
-                sh 'ls'
-                sh 'make' 
+                sh 'ls -al /usr/src/'
             }
         }
     }
