@@ -12,6 +12,8 @@ pipeline {
             steps {
                 sh 'ls -al /usr/src/secc/pipeProto/source'
                 sh 'cd /usr/src/secc/pipeProto/source'
+                sh 'pwd'
+                sh 'ls'
                 sh 'make' 
             }
         }
