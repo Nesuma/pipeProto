@@ -9,9 +9,10 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh 'pwd'
-                sh 'cd /usr/'
-                sh 'pwd'               // docker.image('secc/build_env:v6').inside #{
+                dir("/path/on/container") {
+                    sh "pwd"
+                }
+                // docker.image('secc/build_env:v6').inside #{
                 //     sh 'ls -al'
                 // }
             }
