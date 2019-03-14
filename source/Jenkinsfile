@@ -20,8 +20,7 @@ pipeline {
         }
         stage ('Deploy'){
             steps {
-                sh 'pwd'
-                sh 'ls -al'
+                sh 'mv *.exe /home/hdu/development/secc/builds/'
             }
         }
     }
