@@ -4,7 +4,6 @@ pipeline {
     agent {
         docker { 
             image 'secc/build_env:v6'
-            args '--rm'
         }
     }
     stages {
