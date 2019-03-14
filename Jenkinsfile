@@ -1,8 +1,6 @@
 //docker run --rm -v "$(pwd)"/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source secc/build_env:v6 make
 //cp "$(pwd)"/source/*.exe /home/hdu/development/secc/builds/
 pipeline {
-    agent any 
-
     agent {
         docker { 
             image 'secc/build_env:v6'
@@ -14,6 +12,7 @@ pipeline {
         }
     }
 }
+//     agent any 
 //     stages {
 //         stage('build') {
 //             steps {
