@@ -6,9 +6,13 @@ pipeline {
             image 'secc/build_env:v6'
             args '--rm'
         }
-        steps {
-            sh 'pwd'
-            sh 'ls -al'
+    }
+    stages {
+        stage {
+            steps {
+                sh 'pwd'
+                sh 'ls -al'
+            }
         }
     }
 }
