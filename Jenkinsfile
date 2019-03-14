@@ -13,7 +13,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'docker run --rm -v /var/lib/jenkins/workspace/pipeProto/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source secc/build_env:v6 make'
-                sh 'cp source/*.exe ~/development/secc/builds/'
+                sh 'cp source/*.exe /home/hdu/development/secc/builds/'
             }
         }
     }
