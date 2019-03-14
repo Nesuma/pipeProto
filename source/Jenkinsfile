@@ -1,23 +1,23 @@
 //docker run --rm -v "$(pwd)"/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source secc/build_env:v6 make
 //cp "$(pwd)"/source/*.exe /home/hdu/development/secc/builds/
 pipeline {
-    agent any
-    stages {
-        stage ('Build') {
-            agent {
-                docker { 
-                    image 'secc/build_env:v6'
-                }
-            }
-            steps {
-                dir('source') {
-                    sh 'make'
-                }
-                // docker.image('secc/build_env:v6').inside #{
-                //     sh 'ls -al'
-                // }
-            }
-        }
+    // agent any
+    // stages {
+    //     stage ('Build') {
+    //         agent {
+    //             docker { 
+    //                 image 'secc/build_env:v6'
+    //             }
+    //         }
+    //         steps {
+    //             dir('source') {
+    //                 sh 'make'
+    //             }
+    //             // docker.image('secc/build_env:v6').inside #{
+    //             //     sh 'ls -al'
+    //             // }
+    //         }
+    //     }
         // stage ('Deploy'){
         //     steps {
         //         dir('source'){
@@ -29,16 +29,18 @@ pipeline {
         // }
     }
 }
-//     agent any 
-//     stages {
-//         stage('build') {
-//             steps {
-//                 sh 'docker run --rm -v /var/lib/jenkins/workspace/pipeProto/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source secc/build_env:v6 make'
-//                 sh 'cp source/*.exe /home/hdu/development/secc/builds/'
-//             }
-//         }
-//     }
-// }
+    agent any 
+    stages {
+        stage('build') {
+            steps {
+                sh 'echo $(PWD)'
+                sh 'pwd'
+                sh 'docker run --rm -v /var/lib/jenkins/workspace/pipeProto/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source secc/build_env:v6 make'
+                sh 'cp source/*.exe /home/hdu/development/secc/builds/'
+            }
+        }
+    }
+}
 // pipeline {
 //     agent any
 //     stages {
