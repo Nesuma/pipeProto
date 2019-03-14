@@ -10,6 +10,7 @@ pipeline {
         stage ('Build') {
             steps {
                 // dir('/usr/') {
+                    sh 'ls -al'
                     sh 'make'
                 // }
                 // docker.image('secc/build_env:v6').inside #{
