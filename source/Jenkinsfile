@@ -18,12 +18,15 @@ pipeline {
                 // }
             }
         }
-        stage ('Deploy'){
-            steps {
-                sh 'ls -al'
-                sh 'mv *.exe /home/hdu/development/secc/builds/'
-            }
-        }
+        // stage ('Deploy'){
+        //     steps {
+        //         dir('source'){
+        //             sh 'ls -al'
+        //             sh 'mv *.exe /home/hdu/development/secc/builds/'
+        //         }
+                
+        //     }
+        // }
     }
 }
 //     agent any 
