@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                dir('/usr/src/secc/pipeProto/source') {
+                dir('/usr/) {
                     sh 'ls -al'
                 }
                 // docker.image('secc/build_env:v6').inside #{
