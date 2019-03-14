@@ -29,12 +29,12 @@ pipeline {
         //     }
         // }
 //     }
-// }
+// }n
     agent any 
     stages {
         stage('build') {
             steps {
-                sh 'echo $(PWD)'
+                sh 'echo $PWD'
                 sh 'pwd'
                 sh 'docker run --rm -v /var/lib/jenkins/workspace/pipeProto/source:/usr/src/secc/pipeProto/source -w /usr/src/secc/pipeProto/source secc/build_env:v6 make'
                 sh 'cp source/*.exe /home/hdu/development/secc/builds/'
