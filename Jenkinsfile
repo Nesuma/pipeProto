@@ -9,9 +9,9 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                dir('/usr/') {
-                    sh 'ls -al'
-                }
+                // dir('/usr/') {
+                    sh 'whoami'
+                // }
                 // docker.image('secc/build_env:v6').inside #{
                 //     sh 'ls -al'
                 // }
