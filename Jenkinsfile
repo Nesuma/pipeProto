@@ -13,6 +13,7 @@ pipeline {
             sh 'ls -al'
         }
     }
+}
 //     stages {
 //         stage('build') {
 //             steps {
