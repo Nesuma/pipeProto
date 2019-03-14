@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
+                sh 'ls /usr/src'
                 sh 'pwd'
                 sh 'ls -al'
             }
