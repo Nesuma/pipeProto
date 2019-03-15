@@ -11,5 +11,6 @@ int main(){
     std::cout << "auf dass Jenkins wieder fröhlich wird" << std::endl;
     std::cout << "finaler Test" << std::endl;
     std::cout << "Jenkinsfile funktioniert genauso wie die cmds" << std::endl;
+    std::cout << "immer noch" << std::endl;
     return 0;
 }
